@@ -20,17 +20,31 @@
 
 ---
 
-### 2. Cấu trúc thư mục Đồ án (Project Directory Structure)
+### 2. Hồ sơ Tài liệu Đồ án (Project Documentation)
+
+| STT | Văn kiện học thuật | Định dạng Markdown | Định dạng Word (.docx) | Mô tả tóm tắt |
+| :---: | :--- | :---: | :---: | :--- |
+| **1** | **Bản Thuyết minh Bài toán Khoa học** | [Xem file .md](Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md) | [Tải file .docx](Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx) | Định nghĩa toán học hình thức 10 chương, hàm mất mát Focal Loss, Ma trận chi phí Bayes, 3 cơ chế dung hợp và phương pháp luận thẩm định. |
+| **2** | **Kế hoạch & Lộ trình Thực hiện (8 Tuần)** | [Xem file .md](Ke_Hoach_Thuc_Hien_Do_An.md) | [Tải file .docx](Ke_Hoach_Thuc_Hien_Do_An.docx) | Lộ trình 5 giai đoạn từ 27/10 đến 20/12/2026, ma trận phân công trách nhiệm RACI chi tiết cho 5 thành viên, tiêu chuẩn nghiệm thu khoa học. |
+
+---
+
+### 3. Cấu trúc thư mục Đồ án (Project Directory Structure)
 
 ```text
 D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
-├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md    # Bản thuyết minh khoa học & định nghĩa bài toán đầy đủ (Markdown)
-├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx  # File báo cáo định dạng chuẩn học thuật Word (in ấn/nộp giảng viên)
+├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md    # Bản thuyết minh khoa học & định nghĩa bài toán (Markdown)
+├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx  # Văn bản chuẩn học thuật Word (in ấn / nộp giảng viên)
+├── Ke_Hoach_Thuc_Hien_Do_An.md                       # Kế hoạch chi tiết 8 tuần & ma trận RACI (Markdown)
+├── Ke_Hoach_Thuc_Hien_Do_An.docx                     # Kế hoạch chi tiết định dạng Word (.docx)
 ├── README.md                                         # Hướng dẫn tổng quan đồ án và quy trình thực nghiệm
-├── docs/                                             # Thư mục lưu trữ tài liệu báo cáo & công cụ sinh văn bản
+├── docs/                                             # Thư mục lưu trữ tài liệu báo cáo & script sinh văn bản
 │   ├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md
 │   ├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx
-│   └── generate_docx.py                              # Script Python tự động sinh file Word chuẩn học thuật
+│   ├── Ke_Hoach_Thuc_Hien_Do_An.md
+│   ├── Ke_Hoach_Thuc_Hien_Do_An.docx
+│   ├── generate_docx.py                              # Script Python tự động sinh file Word Thuyết minh bài toán
+│   └── generate_plan_docx.py                         # Script Python tự động sinh file Word Kế hoạch đồ án
 ├── data/                                             # Dữ liệu phục vụ huấn luyện và kiểm thử
 │   ├── raw/                                          # Dữ liệu gốc chưa qua xử lý (video, file ppg thô)
 │   ├── processed/                                    # Dữ liệu đã chuẩn hóa, cắt crop nón bảo hiểm, vector hóa
@@ -55,7 +69,7 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 
 ---
 
-### 3. Tóm tắt Định nghĩa Bài toán Hình thức (Formal Problem Formulation)
+### 4. Tóm tắt Định nghĩa Bài toán Hình thức (Formal Problem Formulation)
 
 * **Không gian đầu vào:** $\mathbf{x}_t = (\mathbf{I}_t, \mathbf{H}_t, s_t) \in \mathcal{X}$
   * $\mathbf{I}_t \in \mathbb{R}^{3 \times 96 \times 96}$: Khung hình góc rộng ghi nhận tư thế nón bảo hiểm và người ngồi sau.
@@ -68,7 +82,19 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 
 ---
 
-### 4. Nguồn Dữ liệu & Quy mô Mẫu (Datasets)
+### 5. Lộ trình 5 Giai đoạn Thực hiện (8 Tuần)
+
+```text
+Giai đoạn 1 (Tuần 2-3: 27/10 - 08/11/2026) : Chuẩn bị Dữ liệu đa nguồn & Pipeline Tăng cường (Data Augmentation)
+Giai đoạn 2 (Tuần 4  : 09/11 - 15/11/2026) : Baseline Models (LightGBM/XGBoost) & Trích xuất Đặc trưng HRV
+Giai đoạn 3 (Tuần 5-6: 16/11 - 29/11/2026) : Phát triển Khung Deep Multimodal & Tối ưu Focal Loss / Cost Matrix
+Giai đoạn 4 (Tuần 7  : 30/11 - 06/12/2026) : Thẩm định Stratified 5-Fold, Thực nghiệm TP.HCM & XAI (Grad-CAM/SHAP)
+Giai đoạn 5 (Tuần 8-9: 07/12 - 20/12/2026) : Hoàn thiện Quyển Báo cáo khoa học >= 40 trang & Bảo vệ Đồ án
+```
+
+---
+
+### 6. Nguồn Dữ liệu & Quy mô Mẫu (Datasets)
 
 1. **Ngủ gật qua Mũ & Kính râm:** Tập dữ liệu **NTHU-DDD** (National Tsing Hua University) và **UTA-RLDD** chuyên biệt về tài xế bịt kín khẩu trang/kính râm.
 2. **Hung khí & Hành vi Tấn công:** Tập **Roboflow Universe Weapon Detection** (>4.200 ảnh dao, hung khí và tư thế siết cổ phía sau).
@@ -77,7 +103,7 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 
 ---
 
-### 5. Chuẩn mực Thẩm định Khoa học (Evaluation Standards)
+### 7. Chuẩn mực Thẩm định Khoa học (Evaluation Standards)
 * **Phương pháp chia tập:** Stratified Subject-Independent Group K-Fold Cross-Validation ($K=5$). Không rò rỉ dữ liệu cùng một cá nhân giữa tập Train và Test.
 * **Chỉ số bắt buộc:** Recall từng lớp (Recall Drowsy $\ge 95\%$, Recall Assault $\ge 98\%$), Precision Drowsy $\ge 90\%$, Macro-F1 Score, PR-AUC, và Ma trận nhầm lẫn chuẩn hóa.
 * **Tính giải thích (XAI):** Trực quan hóa bản đồ nhiệt Grad-CAM trên nón bảo hiểm/hung khí và biểu đồ giá trị Shapley (SHAP) trên các biến số sinh trắc học.
