@@ -27,6 +27,8 @@
 | **1** | **Bản Thuyết minh Bài toán Khoa học** | [Xem file .md](Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md) | [Tải file .docx](Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx) | Định nghĩa toán học hình thức 10 chương, hàm mất mát Focal Loss, Ma trận chi phí Bayes, 3 cơ chế dung hợp và phương pháp luận thẩm định. |
 | **2** | **Kế hoạch & Lộ trình Thực hiện (8 Tuần)** | [Xem file .md](Ke_Hoach_Thuc_Hien_Do_An.md) | [Tải file .docx](Ke_Hoach_Thuc_Hien_Do_An.docx) | Lộ trình 5 giai đoạn từ 27/10 đến 20/12/2026, ma trận phân công trách nhiệm RACI chi tiết cho 5 thành viên, tiêu chuẩn nghiệm thu khoa học. |
 | **3** | **Kế hoạch Step-by-Step Từng Tuần & Thành viên** | [Xem file .md](Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.md) | [Tải file .docx](Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.docx) | Kế hoạch hành động cụ thể từng bước từ Tuần 2 đến Tuần 9, deliverables, file phụ trách và tiêu chí DoD cho từng bạn (Hôn, Khang, Trung, Duy, Sơn). |
+| **4** | **Biên bản Họp Khởi động Đồ án (Tuần 2)** | [Xem file .md](docs/Bien_Ban_Hop_Khoi_Dong_Tuan_2.md) | [Tải file .docx](docs/Bien_Ban_Hop_Khoi_Dong_Tuan_2.docx) | Biên bản họp chính thức chốt đề tài, thống nhất cơ cấu nhóm 5 thành viên và biểu quyết thông qua lộ trình thực hiện. |
+| **5** | **Quy chuẩn Đóng góp & Git Workflow** | [Xem file .md](CONTRIBUTING.md) | — | Hướng dẫn phân nhánh GitFlow, quy chuẩn Conventional Commits, code standards PEP 8, và quy trình Pull Request. |
 
 ---
 
@@ -34,6 +36,12 @@
 
 ```text
 D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
+├── .github/                                            # Cấu hình GitHub templates
+│   ├── ISSUE_TEMPLATE/                                 # Templates tạo task tuần & báo lỗi
+│   │   ├── task_weekly.md
+│   │   └── bug_report.md
+│   └── PULL_REQUEST_TEMPLATE.md                        # Template kiểm thử chéo khi tạo PR
+├── CONTRIBUTING.md                                     # Quy chuẩn đóng góp GitFlow & Code style
 ├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md      # Bản thuyết minh khoa học & định nghĩa bài toán (Markdown)
 ├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx    # Văn bản chuẩn học thuật Word (in ấn / nộp giảng viên)
 ├── Ke_Hoach_Thuc_Hien_Do_An.md                         # Kế hoạch chi tiết 8 tuần & ma trận RACI (Markdown)
@@ -42,6 +50,8 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 ├── Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.docx      # Kế hoạch chi tiết theo tuần & từng thành viên (.docx)
 ├── README.md                                           # Hướng dẫn tổng quan đồ án và quy trình thực nghiệm
 ├── docs/                                               # Thư mục lưu trữ tài liệu báo cáo & script sinh văn bản
+│   ├── Bien_Ban_Hop_Khoi_Dong_Tuan_2.md                # Biên bản họp khởi động tuần 2
+│   ├── Bien_Ban_Hop_Khoi_Dong_Tuan_2.docx              # Bản Word biên bản họp
 │   ├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.md
 │   ├── Dinh_Nghia_Bai_Toan_De_Tai_Machine_Learning.docx
 │   ├── Ke_Hoach_Thuc_Hien_Do_An.md
@@ -50,7 +60,8 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 │   ├── Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.docx
 │   ├── generate_docx.py                                # Script Python sinh file Word Thuyết minh bài toán
 │   ├── generate_plan_docx.py                           # Script Python sinh file Word Kế hoạch đồ án
-│   └── generate_weekly_plan_docx.py                    # Script Python sinh file Word Kế hoạch tuần & thành viên
+│   ├── generate_weekly_plan_docx.py                    # Script Python sinh file Word Kế hoạch tuần & thành viên
+│   └── generate_meeting_docx.py                        # Script Python sinh file Word Biên bản họp
 ├── data/                                               # Dữ liệu phục vụ huấn luyện và kiểm thử
 │   ├── raw/                                          # Dữ liệu gốc chưa qua xử lý (video, file ppg thô)
 │   ├── processed/                                    # Dữ liệu đã chuẩn hóa, cắt crop nón bảo hiểm, vector hóa
