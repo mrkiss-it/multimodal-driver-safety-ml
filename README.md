@@ -29,6 +29,7 @@
 | **3** | **Kế hoạch Step-by-Step Từng Tuần & Thành viên** | [Xem file .md](Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.md) | [Tải file .docx](Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.docx) | Kế hoạch hành động cụ thể từng bước từ Tuần 2 đến Tuần 9, deliverables, file phụ trách và tiêu chí DoD cho từng bạn (Hôn, Khang, Trung, Duy, Sơn). |
 | **4** | **Biên bản Họp Khởi động Đồ án (Tuần 2)** | [Xem file .md](docs/Bien_Ban_Hop_Khoi_Dong_Tuan_2.md) | [Tải file .docx](docs/Bien_Ban_Hop_Khoi_Dong_Tuan_2.docx) | Biên bản họp chính thức chốt đề tài, thống nhất cơ cấu nhóm 5 thành viên và biểu quyết thông qua lộ trình thực hiện. |
 | **5** | **Quy chuẩn Đóng góp & Git Workflow** | [Xem file .md](CONTRIBUTING.md) | — | Hướng dẫn phân nhánh GitFlow, quy chuẩn Conventional Commits, code standards PEP 8, và quy trình Pull Request. |
+| **6** | **Báo cáo Dữ liệu Thị giác (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md) | [Tải file .docx](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.docx) | Khảo sát NTHU-DDD, Roboflow Weapons, kết quả kiểm định chất lượng tệp ảnh và công cụ tự động hóa ingestion. |
 
 ---
 
