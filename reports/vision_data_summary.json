@@ -1,0 +1,53 @@
+{
+  "verified_by": "Nguyễn Duy Khang (Computer Vision Lead)",
+  "subsystems": {
+    "nthu_ddd": {
+      "total_files": 30,
+      "valid_files": 30,
+      "corrupt_files": 0,
+      "corrupt_details": [],
+      "channel_distribution": {
+        "3-channel": 30
+      },
+      "avg_width": 160.0,
+      "avg_height": 160.0,
+      "min_resolution": "160x160",
+      "max_resolution": "160x160",
+      "avg_size_kb": 1.99
+    },
+    "roboflow_weapons": {
+      "total_files": 15,
+      "valid_files": 15,
+      "corrupt_files": 0,
+      "corrupt_details": [],
+      "channel_distribution": {
+        "3-channel": 15
+      },
+      "avg_width": 160.0,
+      "avg_height": 160.0,
+      "min_resolution": "160x160",
+      "max_resolution": "160x160",
+      "avg_size_kb": 1.95
+    },
+    "local_vietnam_helmets": {
+      "total_files": 15,
+      "valid_files": 15,
+      "corrupt_files": 0,
+      "corrupt_details": [],
+      "channel_distribution": {
+        "3-channel": 15
+      },
+      "avg_width": 160.0,
+      "avg_height": 160.0,
+      "min_resolution": "160x160",
+      "max_resolution": "160x160",
+      "avg_size_kb": 1.87
+    }
+  },
+  "overall_summary": {
+    "total_images_scanned": 60,
+    "total_valid": 60,
+    "total_corrupt": 0,
+    "integrity_rate": "100.00%"
+  }
+}
