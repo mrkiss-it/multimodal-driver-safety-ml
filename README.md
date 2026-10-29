@@ -31,6 +31,7 @@
 | **5** | **Quy chuẩn Đóng góp & Git Workflow** | [Xem file .md](CONTRIBUTING.md) | — | Hướng dẫn phân nhánh GitFlow, quy chuẩn Conventional Commits, code standards PEP 8, và quy trình Pull Request. |
 | **6** | **Báo cáo Dữ liệu Thị giác (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md) | [Tải file .docx](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.docx) | Khảo sát NTHU-DDD, Roboflow Weapons, kết quả kiểm định chất lượng tệp ảnh và công cụ tự động hóa ingestion. |
 | **7** | **Báo cáo Dữ liệu Sinh học WESAD (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Sinh_Hoc_Tuan_2.md) | — | Pipeline BVP → nhịp tim 1 Hz, gắn cờ nhiễu, ánh xạ nhãn proxy; kết quả hiện chỉ trên dữ liệu synthetic (WESAD thật chưa tải). |
+| **8** | **Báo cáo Môi trường & Hàm Mất Mát (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Moi_Truong_Va_Ham_Mat_Mat_Tuan_2.md) | — | Chuẩn hóa `requirements.txt` / `environment.yml`, chẩn đoán CPU/CUDA, rà soát toán học Focal/CB/Bayes Loss và kiểm thử `gradcheck`. |
 
 ---
 
@@ -51,6 +52,8 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 ├── Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.md        # Kế hoạch chi tiết theo tuần & từng thành viên (Markdown)
 ├── Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.docx      # Kế hoạch chi tiết theo tuần & từng thành viên (.docx)
 ├── README.md                                           # Hướng dẫn tổng quan đồ án và quy trình thực nghiệm
+├── requirements.txt                                    # Cấu hình thư viện Python chuẩn hóa (pip / venv)
+├── environment.yml                                     # Cấu hình môi trường Conda (driver-safety-ml)
 ├── docs/                                               # Thư mục lưu trữ tài liệu báo cáo & script sinh văn bản
 │   ├── Bien_Ban_Hop_Khoi_Dong_Tuan_2.md                # Biên bản họp khởi động tuần 2
 │   ├── Bien_Ban_Hop_Khoi_Dong_Tuan_2.docx              # Bản Word biên bản họp
@@ -63,6 +66,7 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 │   ├── generate_docx.py                                # Script Python sinh file Word Thuyết minh bài toán
 │   ├── Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md              # Báo cáo dữ liệu thị giác tuần 2 (Khang)
 │   ├── Bao_Cao_Du_Lieu_Sinh_Hoc_Tuan_2.md              # Báo cáo dữ liệu sinh học WESAD tuần 2 (Trung)
+│   ├── Bao_Cao_Moi_Truong_Va_Ham_Mat_Mat_Tuan_2.md     # Báo cáo môi trường ML & hàm mất mát tuần 2 (Duy)
 │   ├── generate_plan_docx.py                           # Script Python sinh file Word Kế hoạch đồ án
 │   ├── generate_weekly_plan_docx.py                    # Script Python sinh file Word Kế hoạch tuần & thành viên
 │   └── generate_meeting_docx.py                        # Script Python sinh file Word Biên bản họp
@@ -81,13 +85,15 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 ├── src/                                              # Mã nguồn module hóa của dự án
 │   ├── data/                                         # download_vision.py, verify_vision_data.py, download_bio.py, parse_wesad.py
 │   ├── features/                                     # Trích xuất đặc trưng HRV, spatial feature transforms
-│   ├── models/                                       # Định nghĩa các kiến trúc mạng (Vision, Bio, Fusion Head)
-│   ├── training/                                     # Trainer, Focal Loss, Class-Balanced Loss, learning rate schedulers
-│   └── evaluation/                                   # K-Fold validator, PR-AUC, Confusion Matrix, Cost calculator
-├── tests/                                            # Kiểm thử tự động (pytest): vision + bio
+│   ├── models/                                       # Kiến trúc mạng & hàm mất mát (losses.py: Focal, CB, Bayes)
+│   ├── training/                                     # Trainer, mixed precision, learning rate schedulers
+│   ├── evaluation/                                   # K-Fold validator, PR-AUC, Confusion Matrix, Cost calculator
+│   └── utils/                                        # Tiện ích cố định seed, kiểm định môi trường & CPU/CUDA (env_check.py)
+├── tests/                                            # Kiểm thử tự động (pytest): vision + bio + env + losses
 └── reports/                                          # Kết quả thực nghiệm và biểu đồ
     ├── vision_data_summary.json                      # Thống kê chất lượng ảnh (tuần 2)
     ├── bio_data_summary_synthetic.json               # Thống kê pipeline WESAD trên dữ liệu SYNTHETIC
+    ├── env_and_loss_verification.json                # Báo cáo xác thực 16 thư viện ML, phần cứng & đạo hàm hàm mất mát
     └── figures/                                      # Biểu đồ ROC, PR curve, Grad-CAM heatmaps, SHAP summary plots
 ```
 
