@@ -1,0 +1,44 @@
+# ==============================================================================
+# Conda Environment Specification - Multimodal Two-Wheel Driver Safety ML
+# Course: Máy học nâng cao (Advanced Machine Learning) - UIT, VNU-HCM
+# Lecturer: ThS./TS. Đặng Việt Dũng
+# Maintainer: Vũ Văn Duy (MSSV: 26410031) - ML Modeling & Evaluation Lead
+#
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate driver-safety-ml
+#
+# GPU Note:
+#   On workstations with an NVIDIA CUDA GPU, replace `cpuonly` below with
+#   `pytorch-cuda=12.4` (and add `- nvidia` under channels).
+# ==============================================================================
+name: driver-safety-ml
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip>=24.0
+  # Core Scientific Computing
+  - numpy>=1.26.0,<2.1.0
+  - scipy>=1.11.0,<2.0.0
+  - pandas>=2.1.0,<3.0.0
+  # Deep Learning (CPU default for portable dev; swap cpuonly -> pytorch-cuda=12.4 on GPU machine)
+  - pytorch>=2.2.0,<3.0.0
+  - torchvision>=0.17.0,<1.0.0
+  - cpuonly
+  # Classical ML & Visualization
+  - scikit-learn>=1.4.0,<2.0.0
+  - matplotlib>=3.8.0,<4.0.0
+  - seaborn>=0.13.0,<1.0.0
+  - pillow>=10.0.0,<12.0.0
+  - pytest>=8.0.0,<10.0.0
+  # Pip-managed ML, Augmentation, XAI & Reporting Packages
+  - pip:
+      - lightgbm>=4.3.0,<5.0.0
+      - xgboost>=2.0.0,<3.0.0
+      - opencv-python-headless>=4.9.0,<5.0.0
+      - albumentations>=1.4.0,<2.1.0
+      - shap>=0.45.0,<1.0.0
+      - python-docx>=1.1.0,<2.0.0

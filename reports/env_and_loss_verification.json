@@ -1,0 +1,182 @@
+{
+  "generated_at_utc": "2026-10-29T16:08:18.088457+00:00",
+  "maintainer": "Vu Van Duy (MSSV: 26410031) - ML Modeling & Evaluation Lead",
+  "week": 2,
+  "hardware_and_runtime": {
+    "python_version": "3.10.11",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "architecture": "AMD64",
+    "cpu_logical_cores": 16,
+    "in_virtualenv": true,
+    "torch_version": "2.7.1+cpu",
+    "cuda_available": false,
+    "torch_cuda_compiled_version": null,
+    "cuda_device_count": 0,
+    "cuda_device_names": [],
+    "resolved_device": "cpu"
+  },
+  "library_summary": {
+    "installed_count": 16,
+    "total_required": 16,
+    "all_installed": true,
+    "packages": {
+      "numpy": {
+        "distribution": "numpy",
+        "installed": true,
+        "version": "1.26.4",
+        "error": null
+      },
+      "scipy": {
+        "distribution": "scipy",
+        "installed": true,
+        "version": "1.15.2",
+        "error": null
+      },
+      "pandas": {
+        "distribution": "pandas",
+        "installed": true,
+        "version": "2.2.3",
+        "error": null
+      },
+      "torch": {
+        "distribution": "torch",
+        "installed": true,
+        "version": "2.7.1+cpu",
+        "error": null
+      },
+      "torchvision": {
+        "distribution": "torchvision",
+        "installed": true,
+        "version": "0.22.1+cpu",
+        "error": null
+      },
+      "sklearn": {
+        "distribution": "scikit-learn",
+        "installed": true,
+        "version": "1.6.0",
+        "error": null
+      },
+      "lightgbm": {
+        "distribution": "lightgbm",
+        "installed": true,
+        "version": "4.7.0",
+        "error": null
+      },
+      "xgboost": {
+        "distribution": "xgboost",
+        "installed": true,
+        "version": "2.1.3",
+        "error": null
+      },
+      "PIL": {
+        "distribution": "Pillow",
+        "installed": true,
+        "version": "11.0.0",
+        "error": null
+      },
+      "cv2": {
+        "distribution": "opencv-python / opencv-python-headless",
+        "installed": true,
+        "version": "4.11.0",
+        "error": null
+      },
+      "albumentations": {
+        "distribution": "albumentations",
+        "installed": true,
+        "version": "2.0.8",
+        "error": null
+      },
+      "matplotlib": {
+        "distribution": "matplotlib",
+        "installed": true,
+        "version": "3.9.3",
+        "error": null
+      },
+      "seaborn": {
+        "distribution": "seaborn",
+        "installed": true,
+        "version": "0.13.2",
+        "error": null
+      },
+      "shap": {
+        "distribution": "shap",
+        "installed": true,
+        "version": "0.49.1",
+        "error": null
+      },
+      "docx": {
+        "distribution": "python-docx",
+        "installed": true,
+        "version": "1.2.0",
+        "error": null
+      },
+      "pytest": {
+        "distribution": "pytest",
+        "installed": true,
+        "version": "9.1.1",
+        "error": null
+      }
+    }
+  },
+  "loss_mathematical_audit": {
+    "device_tested": "cpu",
+    "ce_vs_focal_gamma0_abs_diff": 0.0,
+    "cross_entropy_mean": 1.515416,
+    "focal_loss_gamma2_mean": 1.254464,
+    "class_balanced_focal_mean": 1.741033,
+    "class_balanced_weights_70_20_10": [
+      0.653361,
+      0.920739,
+      1.4259
+    ],
+    "expected_bayes_cost_mean": 64.087944,
+    "combined_focal_cost_mean": 4.458861,
+    "backward_gradients_finite": true,
+    "bayes_decision_demo": {
+      "posteriors": [
+        [
+          0.8500000238418579,
+          0.05000000074505806,
+          0.10000000149011612
+        ],
+        [
+          0.8999999761581421,
+          0.09000000357627869,
+          0.009999999776482582
+        ],
+        [
+          0.9950000047683716,
+          0.004000000189989805,
+          0.0010000000474974513
+        ]
+      ],
+      "argmax_predictions": [
+        0,
+        0,
+        0
+      ],
+      "bayes_optimal_predictions": [
+        2,
+        1,
+        0
+      ],
+      "expected_conditional_costs": [
+        [
+          22.5,
+          2.85,
+          1.95
+        ],
+        [
+          6.5,
+          1.1,
+          2.25
+        ],
+        [
+          0.4,
+          1.015,
+          2.01
+        ]
+      ]
+    }
+  }
+}

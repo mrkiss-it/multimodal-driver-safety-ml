@@ -1,0 +1,45 @@
+# ==============================================================================
+# Standardized Python Dependencies - Multimodal Two-Wheel Driver Safety ML
+# Course: Máy học nâng cao (Advanced Machine Learning) - UIT, VNU-HCM
+# Lecturer: ThS./TS. Đặng Việt Dũng
+# Maintainer: Vũ Văn Duy (MSSV: 26410031) - ML Modeling & Evaluation Lead
+# Target Runtime: Python >= 3.10, < 3.13 (Standardized on Python 3.10)
+#
+# Installation Notes:
+#   1. CPU Workstation / Laptop (default):
+#      pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+#   2. NVIDIA GPU Workstation (CUDA 12.4):
+#      pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+#   3. OpenCV Namespace Rule:
+#      Do NOT install both `opencv-python` and `opencv-python-headless` in the
+#      same virtual environment. Keep `numpy<2.1.0` and `opencv<5.0.0` for ABI
+#      compatibility across scipy, numba/shap, and albumentations.
+# ==============================================================================
+
+# 1. Core Scientific Computing & Time-Series Signal Processing (HRV / Butterworth)
+numpy>=1.26.0,<2.1.0
+scipy>=1.11.0,<2.0.0
+pandas>=2.1.0,<3.0.0
+
+# 2. Deep Learning Framework (MobileNetV3, 1D-CNN + BiLSTM, Cross-Attention, Losses)
+torch>=2.2.0,<3.0.0
+torchvision>=0.17.0,<1.0.0
+
+# 3. Classical ML, Stratified Group K-Fold & Tabular GBDT Baselines (Week 3-4)
+scikit-learn>=1.4.0,<2.0.0
+lightgbm>=4.3.0,<5.0.0
+xgboost>=2.0.0,<3.0.0
+
+# 4. Computer Vision & Adaptive Spatial Data Augmentation (Week 2-3)
+Pillow>=10.0.0,<12.0.0
+opencv-python-headless>=4.9.0,<5.0.0
+albumentations>=1.4.0,<2.1.0
+
+# 5. Visualization, Explainable AI (Grad-CAM / SHAP) & Academic Reporting (Week 7-8)
+matplotlib>=3.8.0,<4.0.0
+seaborn>=0.13.0,<1.0.0
+shap>=0.45.0,<1.0.0
+python-docx>=1.1.0,<2.0.0
+
+# 6. Automated Unit Testing & Quality Assurance
+pytest>=8.0.0,<10.0.0
