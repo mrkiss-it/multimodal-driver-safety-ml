@@ -1,0 +1,61 @@
+{
+  "generated_at_utc": "2026-10-29T16:56:36.078054+00:00",
+  "maintainer": "Hoang Cao Son (MSSV: 25730061) - Data Engineering & XAI",
+  "week": 2,
+  "data_transparency_notice": "Real HCMC street/campus photos have NOT yet been captured; data/raw/local_samples/ currently has 0 real photos. All 50 pilot images validated below are SYNTHETIC dry-run samples (is_synthetic=True) stored in data/raw/local_samples_synthetic/.",
+  "directory_status": {
+    "real_dir": "D:\\Trí tuệ nhân tạo\\HK3\\Máy học nâng cao\\Đồ án\\data\\raw\\local_samples",
+    "real_image_count": 0,
+    "real_field_data_collected": false,
+    "synthetic_pilot_dir": "D:\\Trí tuệ nhân tạo\\HK3\\Máy học nâng cao\\Đồ án\\data\\raw\\local_samples_synthetic",
+    "synthetic_pilot_image_count": 50,
+    "synthetic_manifest_exists": true
+  },
+  "pilot_validation": {
+    "samples_dir": "D:\\Trí tuệ nhân tạo\\HK3\\Máy học nâng cao\\Đồ án\\data\\raw\\local_samples_synthetic",
+    "manifest_path": "D:\\Trí tuệ nhân tạo\\HK3\\Máy học nâng cao\\Đồ án\\data\\raw\\local_samples_synthetic\\manifest.csv",
+    "all_synthetic": true,
+    "total_manifest_rows": 50,
+    "valid_images": 50,
+    "missing_images": 0,
+    "corrupt_images": 0,
+    "integrity_rate_pct": 100.0,
+    "is_valid": true,
+    "unique_subjects": 10,
+    "class_counts": {
+      "Normal": 35,
+      "Drowsiness": 10,
+      "Assault": 5
+    },
+    "class_ratios": {
+      "Normal": 0.7,
+      "Drowsiness": 0.2,
+      "Assault": 0.1
+    },
+    "helmet_type_counts": {
+      "be_yellow": 10,
+      "grab_green": 10,
+      "half_helmet_mask": 10,
+      "shopeefood_orange": 10,
+      "three_quarter_visor": 10
+    },
+    "lighting_condition_counts": {
+      "daylight_sunny": 13,
+      "dusk_streetlight": 12,
+      "night_glare": 12,
+      "tree_shadow": 13
+    },
+    "mean_brightness_by_lighting": {
+      "daylight_sunny": 159.86,
+      "dusk_streetlight": 93.44,
+      "night_glare": 67.09,
+      "tree_shadow": 116.25
+    },
+    "mean_head_pitch_deg_by_class": {
+      "Normal": 10.49,
+      "Drowsiness": 34.34,
+      "Assault": 12.97
+    },
+    "errors": []
+  }
+}

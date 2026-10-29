@@ -32,6 +32,7 @@
 | **6** | **Báo cáo Dữ liệu Thị giác (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md) | [Tải file .docx](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.docx) | Khảo sát NTHU-DDD, Roboflow Weapons, kết quả kiểm định chất lượng tệp ảnh và công cụ tự động hóa ingestion. |
 | **7** | **Báo cáo Dữ liệu Sinh học WESAD (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Sinh_Hoc_Tuan_2.md) | — | Pipeline BVP → nhịp tim 1 Hz, gắn cờ nhiễu, ánh xạ nhãn proxy; kết quả hiện chỉ trên dữ liệu synthetic (WESAD thật chưa tải). |
 | **8** | **Báo cáo Môi trường & Hàm Mất Mát (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Moi_Truong_Va_Ham_Mat_Mat_Tuan_2.md) | — | Chuẩn hóa `requirements.txt` / `environment.yml`, chẩn đoán CPU/CUDA, rà soát toán học Focal/CB/Bayes Loss và kiểm thử `gradcheck`. |
+| **9** | **Kế hoạch Thực địa TP.HCM & Báo cáo EDA (Tuần 2)** | [Xem file .md](docs/Ke_Hoach_Thu_Thap_Thuc_Dia_Va_EDA_Tuan_2.md) | — | Quy trình quay thực địa an toàn tại TP.HCM, 50 mẫu pilot nón bảo hiểm (synthetic) và Notebook EDA đầu tiên kèm 3 biểu đồ tổng quan. |
 
 ---
 
@@ -67,6 +68,7 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 │   ├── Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md              # Báo cáo dữ liệu thị giác tuần 2 (Khang)
 │   ├── Bao_Cao_Du_Lieu_Sinh_Hoc_Tuan_2.md              # Báo cáo dữ liệu sinh học WESAD tuần 2 (Trung)
 │   ├── Bao_Cao_Moi_Truong_Va_Ham_Mat_Mat_Tuan_2.md     # Báo cáo môi trường ML & hàm mất mát tuần 2 (Duy)
+│   ├── Ke_Hoach_Thu_Thap_Thuc_Dia_Va_EDA_Tuan_2.md     # Kế hoạch thu thập thực địa TP.HCM & EDA tuần 2 (Sơn)
 │   ├── generate_plan_docx.py                           # Script Python sinh file Word Kế hoạch đồ án
 │   ├── generate_weekly_plan_docx.py                    # Script Python sinh file Word Kế hoạch tuần & thành viên
 │   └── generate_meeting_docx.py                        # Script Python sinh file Word Biên bản họp
@@ -83,18 +85,19 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 │   ├── checkpoints/                                  # Checkpoints trong quá trình train
 │   └── saved_models/                                 # Mô hình tối ưu hoàn chỉnh (.pth, .onnx)
 ├── src/                                              # Mã nguồn module hóa của dự án
-│   ├── data/                                         # download_vision.py, verify_vision_data.py, download_bio.py, parse_wesad.py
+│   ├── data/                                         # download_vision.py, verify_vision_data.py, download_bio.py, parse_wesad.py, local_samples.py
 │   ├── features/                                     # Trích xuất đặc trưng HRV, spatial feature transforms
 │   ├── models/                                       # Kiến trúc mạng & hàm mất mát (losses.py: Focal, CB, Bayes)
 │   ├── training/                                     # Trainer, mixed precision, learning rate schedulers
 │   ├── evaluation/                                   # K-Fold validator, PR-AUC, Confusion Matrix, Cost calculator
 │   └── utils/                                        # Tiện ích cố định seed, kiểm định môi trường & CPU/CUDA (env_check.py)
-├── tests/                                            # Kiểm thử tự động (pytest): vision + bio + env + losses
+├── tests/                                            # Kiểm thử tự động (pytest): vision + bio + env + losses + local_samples/eda
 └── reports/                                          # Kết quả thực nghiệm và biểu đồ
     ├── vision_data_summary.json                      # Thống kê chất lượng ảnh (tuần 2)
     ├── bio_data_summary_synthetic.json               # Thống kê pipeline WESAD trên dữ liệu SYNTHETIC
     ├── env_and_loss_verification.json                # Báo cáo xác thực 16 thư viện ML, phần cứng & đạo hàm hàm mất mát
-    └── figures/                                      # Biểu đồ ROC, PR curve, Grad-CAM heatmaps, SHAP summary plots
+    ├── local_samples_pilot_summary.json              # Thống kê 50 mẫu pilot nón bảo hiểm TP.HCM (SYNTHETIC)
+    └── figures/                                      # Biểu đồ EDA tuần 2, PR curve, Grad-CAM heatmaps, SHAP summary plots
 ```
 
 ---
