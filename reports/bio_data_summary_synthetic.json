@@ -1,0 +1,236 @@
+{
+  "parsed_by": "Phạm Thành Trung (Bio-Signal & Time-Series Specialist)",
+  "data_source": "synthetic",
+  "is_synthetic": true,
+  "n_subjects": 15,
+  "total_seconds": 9300,
+  "valid_seconds": 8760,
+  "valid_rate": 0.9419,
+  "subjects": [
+    {
+      "subject": "S2",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 79.21,
+      "hr_by_label": {
+        "baseline": 73.22,
+        "stress": 100.93,
+        "amusement": 79.26,
+        "meditation": 64.7
+      }
+    },
+    {
+      "subject": "S3",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 76.03,
+      "hr_by_label": {
+        "baseline": 69.72,
+        "stress": 98.3,
+        "amusement": 75.64,
+        "meditation": 61.91
+      }
+    },
+    {
+      "subject": "S4",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 71.77,
+      "hr_by_label": {
+        "baseline": 65.12,
+        "stress": 93.25,
+        "amusement": 73.05,
+        "meditation": 57.52
+      }
+    },
+    {
+      "subject": "S5",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 72.81,
+      "hr_by_label": {
+        "baseline": 65.86,
+        "stress": 94.8,
+        "amusement": 73.43,
+        "meditation": 59.45
+      }
+    },
+    {
+      "subject": "S6",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 67.16,
+      "hr_by_label": {
+        "baseline": 61.01,
+        "stress": 87.86,
+        "amusement": 67.75,
+        "meditation": 53.63
+      }
+    },
+    {
+      "subject": "S7",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 76.71,
+      "hr_by_label": {
+        "baseline": 69.57,
+        "stress": 98.17,
+        "amusement": 75.64,
+        "meditation": 65.05
+      }
+    },
+    {
+      "subject": "S8",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 72.01,
+      "hr_by_label": {
+        "baseline": 65.38,
+        "stress": 94.33,
+        "amusement": 71.55,
+        "meditation": 58.21
+      }
+    },
+    {
+      "subject": "S9",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 78.7,
+      "hr_by_label": {
+        "baseline": 72.19,
+        "stress": 100.58,
+        "amusement": 78.27,
+        "meditation": 64.54
+      }
+    },
+    {
+      "subject": "S10",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 76.99,
+      "hr_by_label": {
+        "baseline": 70.72,
+        "stress": 97.78,
+        "amusement": 77.09,
+        "meditation": 63.59
+      }
+    },
+    {
+      "subject": "S11",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 73.89,
+      "hr_by_label": {
+        "baseline": 66.59,
+        "stress": 96.12,
+        "amusement": 74.19,
+        "meditation": 60.03
+      }
+    },
+    {
+      "subject": "S13",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 75.18,
+      "hr_by_label": {
+        "baseline": 69.58,
+        "stress": 96.62,
+        "amusement": 76.33,
+        "meditation": 61.05
+      }
+    },
+    {
+      "subject": "S14",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 78.14,
+      "hr_by_label": {
+        "baseline": 71.93,
+        "stress": 98.55,
+        "amusement": 79.29,
+        "meditation": 64.57
+      }
+    },
+    {
+      "subject": "S15",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 81.2,
+      "hr_by_label": {
+        "baseline": 76.11,
+        "stress": 102.65,
+        "amusement": 81.51,
+        "meditation": 66.76
+      }
+    },
+    {
+      "subject": "S16",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 81.82,
+      "hr_by_label": {
+        "baseline": 76.46,
+        "stress": 103.04,
+        "amusement": 81.43,
+        "meditation": 67.43
+      }
+    },
+    {
+      "subject": "S17",
+      "n_seconds": 620,
+      "valid_seconds": 584,
+      "valid_rate": 0.9419,
+      "dropout_seconds": 12,
+      "motion_seconds": 16,
+      "hr_mean_valid": 73.96,
+      "hr_by_label": {
+        "baseline": 68.69,
+        "stress": 95.23,
+        "amusement": 74.21,
+        "meditation": 60.22
+      }
+    }
+  ]
+}

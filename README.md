@@ -30,6 +30,7 @@
 | **4** | **Biên bản Họp Khởi động Đồ án (Tuần 2)** | [Xem file .md](docs/Bien_Ban_Hop_Khoi_Dong_Tuan_2.md) | [Tải file .docx](docs/Bien_Ban_Hop_Khoi_Dong_Tuan_2.docx) | Biên bản họp chính thức chốt đề tài, thống nhất cơ cấu nhóm 5 thành viên và biểu quyết thông qua lộ trình thực hiện. |
 | **5** | **Quy chuẩn Đóng góp & Git Workflow** | [Xem file .md](CONTRIBUTING.md) | — | Hướng dẫn phân nhánh GitFlow, quy chuẩn Conventional Commits, code standards PEP 8, và quy trình Pull Request. |
 | **6** | **Báo cáo Dữ liệu Thị giác (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md) | [Tải file .docx](docs/Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.docx) | Khảo sát NTHU-DDD, Roboflow Weapons, kết quả kiểm định chất lượng tệp ảnh và công cụ tự động hóa ingestion. |
+| **7** | **Báo cáo Dữ liệu Sinh học WESAD (Tuần 2)** | [Xem file .md](docs/Bao_Cao_Du_Lieu_Sinh_Hoc_Tuan_2.md) | — | Pipeline BVP → nhịp tim 1 Hz, gắn cờ nhiễu, ánh xạ nhãn proxy; kết quả hiện chỉ trên dữ liệu synthetic (WESAD thật chưa tải). |
 
 ---
 
@@ -60,6 +61,8 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 │   ├── Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.md
 │   ├── Ke_Hoach_Chi_Tiet_Tung_Tuan_Va_Thanh_Vien.docx
 │   ├── generate_docx.py                                # Script Python sinh file Word Thuyết minh bài toán
+│   ├── Bao_Cao_Du_Lieu_Thi_Giac_Tuan_2.md              # Báo cáo dữ liệu thị giác tuần 2 (Khang)
+│   ├── Bao_Cao_Du_Lieu_Sinh_Hoc_Tuan_2.md              # Báo cáo dữ liệu sinh học WESAD tuần 2 (Trung)
 │   ├── generate_plan_docx.py                           # Script Python sinh file Word Kế hoạch đồ án
 │   ├── generate_weekly_plan_docx.py                    # Script Python sinh file Word Kế hoạch tuần & thành viên
 │   └── generate_meeting_docx.py                        # Script Python sinh file Word Biên bản họp
@@ -76,12 +79,15 @@ D:\Trí tuệ nhân tạo\HK3\Máy học nâng cao\Đồ án\
 │   ├── checkpoints/                                  # Checkpoints trong quá trình train
 │   └── saved_models/                                 # Mô hình tối ưu hoàn chỉnh (.pth, .onnx)
 ├── src/                                              # Mã nguồn module hóa của dự án
-│   ├── data/                                         # Data loaders, dataset classes, augmentation pipelines
+│   ├── data/                                         # download_vision.py, verify_vision_data.py, download_bio.py, parse_wesad.py
 │   ├── features/                                     # Trích xuất đặc trưng HRV, spatial feature transforms
 │   ├── models/                                       # Định nghĩa các kiến trúc mạng (Vision, Bio, Fusion Head)
 │   ├── training/                                     # Trainer, Focal Loss, Class-Balanced Loss, learning rate schedulers
 │   └── evaluation/                                   # K-Fold validator, PR-AUC, Confusion Matrix, Cost calculator
+├── tests/                                            # Kiểm thử tự động (pytest): vision + bio
 └── reports/                                          # Kết quả thực nghiệm và biểu đồ
+    ├── vision_data_summary.json                      # Thống kê chất lượng ảnh (tuần 2)
+    ├── bio_data_summary_synthetic.json               # Thống kê pipeline WESAD trên dữ liệu SYNTHETIC
     └── figures/                                      # Biểu đồ ROC, PR curve, Grad-CAM heatmaps, SHAP summary plots
 ```
 
